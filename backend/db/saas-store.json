@@ -1,0 +1,919 @@
+{
+  "companies": [
+    {
+      "id": "comp-39093d87",
+      "name": "Apex Global FinTech",
+      "domain": "apexfintech.com",
+      "plan": "Enterprise",
+      "status": "active",
+      "candidateQuota": 150,
+      "candidatesUsed": 3,
+      "maxJobs": 25,
+      "createdAt": "2026-09-05T06:35:25.724Z"
+    },
+    {
+      "id": "comp-d70f0bfd",
+      "name": "NovaTech Cloud Systems",
+      "domain": "novatech.io",
+      "plan": "Growth",
+      "status": "active",
+      "candidateQuota": 60,
+      "candidatesUsed": 1,
+      "maxJobs": 10,
+      "createdAt": "2026-09-05T06:35:25.724Z"
+    }
+  ],
+  "users": [
+    {
+      "id": "user-95f7257a",
+      "tenantId": "GLOBAL",
+      "email": "admin@ardhnarishwar.ai",
+      "passwordHash": "$2b$10$Xz9RXQP4SxjyszYtntYaX.rnuRIUZIVsvqZ3IuQf/1dHp2dBTKU6W",
+      "role": "SUPER_ADMIN",
+      "name": "Ardhnarishwar SuperAdmin",
+      "companyName": "Ardhnarishwar Corporation",
+      "createdAt": "2026-09-05T06:35:25.724Z"
+    },
+    {
+      "id": "user-18a00a00",
+      "tenantId": "comp-39093d87",
+      "email": "admin@apexfintech.com",
+      "passwordHash": "$2b$10$Xz9RXQP4SxjyszYtntYaX.rnuRIUZIVsvqZ3IuQf/1dHp2dBTKU6W",
+      "role": "COMPANY_ADMIN",
+      "name": "Vikramaditya Rao",
+      "companyName": "Apex Global FinTech",
+      "createdAt": "2026-09-05T06:35:25.725Z"
+    },
+    {
+      "id": "user-54beb8cf",
+      "tenantId": "comp-d70f0bfd",
+      "email": "admin@novatech.io",
+      "passwordHash": "$2b$10$Xz9RXQP4SxjyszYtntYaX.rnuRIUZIVsvqZ3IuQf/1dHp2dBTKU6W",
+      "role": "COMPANY_ADMIN",
+      "name": "Meera Nambiar",
+      "companyName": "NovaTech Cloud Systems",
+      "createdAt": "2026-09-05T06:35:25.725Z"
+    }
+  ],
+  "jobs": [
+    {
+      "id": "job-6006880d",
+      "tenantId": "comp-39093d87",
+      "title": "Senior Full Stack Engineer",
+      "department": "Core Banking Engineering",
+      "experienceLevel": "5+ Years",
+      "skillsRequired": [
+        "React",
+        "Node.js",
+        "SQL",
+        "B-Tree Indexing",
+        "Microservices",
+        "System Design"
+      ],
+      "description": "Lead architecture of high-throughput payment transaction pipelines and customer dashboard interfaces.",
+      "passThreshold": 75,
+      "status": "active",
+      "questionIds": [
+        "q-c4da6da8",
+        "q-2546ea61",
+        "q-286dbf4b",
+        "q-9dc3f18c"
+      ],
+      "createdAt": "2026-09-05T06:35:25.726Z"
+    },
+    {
+      "id": "job-26efdc03",
+      "tenantId": "comp-39093d87",
+      "title": "Staff Backend Architect",
+      "department": "Distributed Systems Group",
+      "experienceLevel": "8+ Years",
+      "skillsRequired": [
+        "Distributed Systems",
+        "Kafka",
+        "PostgreSQL",
+        "Golang / Node",
+        "Saga Pattern"
+      ],
+      "description": "Design distributed transaction engines handling over 50,000 TPS.",
+      "passThreshold": 80,
+      "status": "active",
+      "questionIds": [
+        "q-c4da6da8",
+        "q-2546ea61",
+        "q-286dbf4b"
+      ],
+      "createdAt": "2026-09-05T06:35:25.726Z"
+    },
+    {
+      "id": "job-720c7bdf",
+      "tenantId": "comp-d70f0bfd",
+      "title": "Cloud DevOps Architect",
+      "department": "Infrastructure & SRE",
+      "experienceLevel": "6+ Years",
+      "skillsRequired": [
+        "Kubernetes",
+        "AWS",
+        "Terraform",
+        "CI/CD",
+        "Prometheus",
+        "Chaos Engineering"
+      ],
+      "description": "Manage multi-region Kubernetes clusters, automated zero-downtime deployments, and infrastructure resilience.",
+      "passThreshold": 72,
+      "status": "active",
+      "questionIds": [
+        "q-2546ea61",
+        "q-286dbf4b",
+        "q-9dc3f18c"
+      ],
+      "createdAt": "2026-09-05T06:35:25.727Z"
+    }
+  ],
+  "interviewConfigs": [],
+  "questionBank": [
+    {
+      "id": "q-c4da6da8",
+      "tenantId": "GLOBAL",
+      "isGlobal": true,
+      "category": "Technical",
+      "difficulty": "Senior",
+      "questionText": "Explain how database indexing works internally (B-Trees vs Hash Indexes) and what trade-offs you consider when adding indexes to a high-write production table.",
+      "goldAnswer": "Database indexes like B-Trees maintain sorted keys allowing logarithmic lookups, range scans, and order-by operations in O(log N). Hash indexes offer O(1) equality searches but fail on range queries. On high-write tables, indexes impose write latency because every INSERT, UPDATE, and DELETE requires updating the index tree and WAL, alongside consuming additional memory and disk I/O.",
+      "requiredKeywords": [
+        "b-tree",
+        "logarithmic",
+        "range",
+        "write",
+        "trade-off",
+        "latency",
+        "storage"
+      ],
+      "bonusKeywords": [
+        "b+ tree",
+        "wal",
+        "composite index",
+        "lock contention",
+        "page split"
+      ],
+      "coreCompetencies": [
+        "database optimization",
+        "system performance",
+        "storage engines"
+      ],
+      "timeLimitSeconds": 120,
+      "createdAt": "2026-09-05T06:35:25.725Z"
+    },
+    {
+      "id": "q-2546ea61",
+      "tenantId": "GLOBAL",
+      "isGlobal": true,
+      "category": "Technical",
+      "difficulty": "Senior",
+      "questionText": "When designing a distributed system, how do you handle microservice communication, fault isolation, and data consistency across distributed transactions?",
+      "goldAnswer": "We isolate communication using synchronous gRPC or REST for low latency reads, and asynchronous message brokers like Kafka or RabbitMQ for decoupled event-driven workflows. To prevent cascading failures, we implement circuit breakers and retries with exponential backoff. For distributed data consistency, rather than two-phase commits which harm availability, we use the Saga pattern with compensating transactions and eventual consistency.",
+      "requiredKeywords": [
+        "microservices",
+        "grpc",
+        "kafka",
+        "circuit breaker",
+        "saga",
+        "eventual consistency"
+      ],
+      "bonusKeywords": [
+        "two-phase commit",
+        "idempotency",
+        "dead letter queue",
+        "distributed tracing"
+      ],
+      "coreCompetencies": [
+        "system architecture",
+        "distributed systems",
+        "resilience"
+      ],
+      "timeLimitSeconds": 120,
+      "createdAt": "2026-09-05T06:35:25.725Z"
+    },
+    {
+      "id": "q-286dbf4b",
+      "tenantId": "GLOBAL",
+      "isGlobal": true,
+      "category": "Behavioral",
+      "difficulty": "Mid-Senior",
+      "questionText": "Describe a situation where you had a strong technical disagreement with a team member or architect. How did you handle it and what was the outcome?",
+      "goldAnswer": "In my previous project, we disagreed on whether to migrate our monolith immediately to microservices or refactor modularly. My responsibility was to keep development velocity high without creating operational bottlenecks. I set up a technical spike where we measured build times, latency overhead, and deployment complexity. As a result, we agreed on a phased modular monolith first, delivering features 30% faster.",
+      "requiredKeywords": [
+        "situation",
+        "responsibility",
+        "objective",
+        "spike",
+        "outcome",
+        "result",
+        "collaborative"
+      ],
+      "bonusKeywords": [
+        "consensus",
+        "data-driven",
+        "trade-off",
+        "retrospective"
+      ],
+      "coreCompetencies": [
+        "conflict resolution",
+        "communication",
+        "leadership"
+      ],
+      "timeLimitSeconds": 90,
+      "createdAt": "2026-09-05T06:35:25.725Z"
+    },
+    {
+      "id": "q-9dc3f18c",
+      "tenantId": "GLOBAL",
+      "isGlobal": true,
+      "category": "HR",
+      "difficulty": "General",
+      "questionText": "What motivates you as an engineer, and how do you prioritize competing deadlines when facing tight product release timelines?",
+      "goldAnswer": "I am motivated by solving complex business challenges and delivering performant, reliable software. When managing competing deadlines, I analyze the impact and urgency using an Eisenhower matrix, communicate transparently with stakeholders about trade-offs, and break tasks down into iterative deliverables.",
+      "requiredKeywords": [
+        "prioritize",
+        "stakeholders",
+        "trade-off",
+        "communication",
+        "deliverables",
+        "impact"
+      ],
+      "bonusKeywords": [
+        "mvp",
+        "iterative",
+        "transparent",
+        "urgent"
+      ],
+      "coreCompetencies": [
+        "time management",
+        "work ethic",
+        "stakeholder communication"
+      ],
+      "timeLimitSeconds": 90,
+      "createdAt": "2026-09-05T06:35:25.726Z"
+    }
+  ],
+  "candidates": [
+    {
+      "id": "cand-3fe1784c",
+      "tenantId": "comp-39093d87",
+      "jobId": "job-6006880d",
+      "name": "Siddharth Sharma",
+      "email": "siddharth.sharma@example.com",
+      "phone": "+91 98765 43210",
+      "inviteToken": "6ee17a6beb6e403a",
+      "status": "COMPLETED",
+      "recruiterNotes": "Outstanding technical articulation. Strong understanding of B-Tree indexing and Saga distributed architecture.",
+      "appliedDate": "2026-09-05T06:35:25.727Z"
+    },
+    {
+      "id": "cand-148d3e6b",
+      "tenantId": "comp-d70f0bfd",
+      "jobId": "job-720c7bdf",
+      "name": "Ananya Iyer",
+      "email": "ananya.iyer@cloudengine.net",
+      "phone": "+91 99887 76655",
+      "inviteToken": "a1d4c37eddc24c29",
+      "status": "COMPLETED",
+      "recruiterNotes": "",
+      "appliedDate": "2026-09-05T06:35:25.728Z"
+    },
+    {
+      "id": "cand-b1f6c1eb",
+      "tenantId": "comp-39093d87",
+      "jobId": "job-6006880d",
+      "name": "Rohan Patel",
+      "email": "rohan.patel@devmail.org",
+      "phone": "+91 91234 56789",
+      "inviteToken": "47457e8779074bb0",
+      "status": "COMPLETED",
+      "recruiterNotes": "",
+      "appliedDate": "2026-09-05T06:35:25.729Z"
+    },
+    {
+      "id": "cand-4d786a4f",
+      "tenantId": "comp-39093d87",
+      "jobId": "job-6006880d",
+      "name": "Pooja Verma",
+      "email": "pooja.verma@demo.io",
+      "phone": "+91 97766 55443",
+      "inviteToken": "a0351b132b194305",
+      "status": "SHORTLISTED",
+      "recruiterNotes": "Candidate articulated B-Tree indexing and write overhead clearly. Approved for round 2.",
+      "appliedDate": "2026-09-05T06:35:25.730Z"
+    }
+  ],
+  "interviews": [
+    {
+      "id": "intv-b5970c38",
+      "tenantId": "comp-39093d87",
+      "candidateId": "cand-3fe1784c",
+      "jobId": "job-6006880d",
+      "startedAt": "2026-09-05T06:35:25.727Z",
+      "completedAt": "2026-09-05T06:35:25.728Z",
+      "status": "COMPLETED",
+      "overallScore": 88,
+      "aiRecommendation": "Strong Hire",
+      "evaluationReport": {
+        "overallScore": 88,
+        "recommendation": "Strong Hire",
+        "badgeColor": "#10b981",
+        "evaluatedAt": "2026-09-05T06:35:25.728Z",
+        "metricsRadar": {
+          "relevance": 91,
+          "knowledge": 88,
+          "technicalCompetency": 88,
+          "communication": 87,
+          "problemSolving": 90,
+          "confidence": 88,
+          "completeness": 91,
+          "roleSpecific": 88
+        },
+        "questionCount": 3,
+        "questions": [
+          {
+            "questionId": "q-c4da6da8",
+            "questionText": "Explain how database indexing works internally (B-Trees vs Hash Indexes) and what trade-offs you consider when adding indexes to a high-write production table.",
+            "category": "Technical",
+            "overallQuestionScore": 89,
+            "metrics": {
+              "relevance": 92,
+              "knowledge": 90,
+              "technicalCompetency": 88,
+              "communication": 85,
+              "problemSolving": 90,
+              "confidence": 88,
+              "completeness": 94,
+              "roleSpecific": 90
+            },
+            "details": {
+              "wordCount": 142,
+              "fillerCount": 1,
+              "fillerRatio": 0.007,
+              "clarityLevel": "Exceptional",
+              "confidenceLevel": "Very High",
+              "matchedKeywords": [
+                "b-tree",
+                "logarithmic",
+                "range",
+                "write",
+                "trade-off",
+                "latency",
+                "storage"
+              ],
+              "missingKeywords": [],
+              "detectedSkills": [
+                "sql",
+                "indexing",
+                "b-tree",
+                "transactions"
+              ],
+              "strengths": [
+                "Demonstrated deep grasp of B-Tree balanced structures and O(log N) lookup time.",
+                "Accurately highlighted index write penalty on high-frequency tables."
+              ],
+              "improvements": [
+                "Could briefly mention composite index ordering (leftmost prefix rule)."
+              ]
+            }
+          },
+          {
+            "questionId": "q-2546ea61",
+            "questionText": "When designing a distributed system, how do you handle microservice communication, fault isolation, and data consistency across distributed transactions?",
+            "category": "Technical",
+            "overallQuestionScore": 91,
+            "metrics": {
+              "relevance": 94,
+              "knowledge": 92,
+              "technicalCompetency": 92,
+              "communication": 87,
+              "problemSolving": 93,
+              "confidence": 90,
+              "completeness": 92,
+              "roleSpecific": 91
+            },
+            "details": {
+              "wordCount": 156,
+              "fillerCount": 2,
+              "fillerRatio": 0.012,
+              "clarityLevel": "Exceptional",
+              "confidenceLevel": "Very High",
+              "matchedKeywords": [
+                "microservices",
+                "grpc",
+                "kafka",
+                "circuit breaker",
+                "saga",
+                "eventual consistency"
+              ],
+              "missingKeywords": [],
+              "detectedSkills": [
+                "microservices",
+                "rest",
+                "kafka",
+                "circuit breaker"
+              ],
+              "strengths": [
+                "Seamlessly explained Saga orchestrator pattern vs choreography.",
+                "Clear mention of resilience circuit breaker patterns."
+              ],
+              "improvements": []
+            }
+          },
+          {
+            "questionId": "q-286dbf4b",
+            "questionText": "Describe a situation where you had a strong technical disagreement with a team member or architect. How did you handle it and what was the outcome?",
+            "category": "Behavioral",
+            "overallQuestionScore": 85,
+            "metrics": {
+              "relevance": 88,
+              "knowledge": 82,
+              "technicalCompetency": 84,
+              "communication": 89,
+              "problemSolving": 88,
+              "confidence": 86,
+              "completeness": 88,
+              "roleSpecific": 82
+            },
+            "details": {
+              "wordCount": 128,
+              "fillerCount": 2,
+              "fillerRatio": 0.015,
+              "clarityLevel": "Exceptional",
+              "confidenceLevel": "Very High",
+              "matchedKeywords": [
+                "situation",
+                "responsibility",
+                "objective",
+                "outcome",
+                "collaborative"
+              ],
+              "missingKeywords": [],
+              "detectedSkills": [],
+              "starAnalysis": {
+                "isSTARFramed": true,
+                "score": 100
+              },
+              "strengths": [
+                "Strong STAR framework adherence.",
+                "Showcased data-driven consensus building rather than ego-driven conflict."
+              ],
+              "improvements": [
+                "Could quantify developer efficiency improvement with more specific KPI numbers."
+              ]
+            }
+          }
+        ]
+      }
+    },
+    {
+      "id": "intv-e20d9396",
+      "tenantId": "comp-d70f0bfd",
+      "candidateId": "cand-148d3e6b",
+      "jobId": "job-720c7bdf",
+      "startedAt": "2026-09-05T06:35:25.729Z",
+      "completedAt": "2026-09-05T06:35:25.729Z",
+      "status": "COMPLETED",
+      "overallScore": 84,
+      "aiRecommendation": "Hire",
+      "evaluationReport": {
+        "overallScore": 84,
+        "recommendation": "Hire",
+        "badgeColor": "#3b82f6",
+        "evaluatedAt": "2026-09-05T06:35:25.729Z",
+        "metricsRadar": {
+          "relevance": 86,
+          "knowledge": 85,
+          "technicalCompetency": 84,
+          "communication": 82,
+          "problemSolving": 85,
+          "confidence": 84,
+          "completeness": 88,
+          "roleSpecific": 86
+        },
+        "questionCount": 1,
+        "questions": [
+          {
+            "questionId": "q-2546ea61",
+            "questionText": "When designing a distributed system, how do you handle microservice communication, fault isolation, and data consistency across distributed transactions?",
+            "category": "Technical",
+            "overallQuestionScore": 84,
+            "metrics": {
+              "relevance": 86,
+              "knowledge": 85,
+              "technicalCompetency": 84,
+              "communication": 82,
+              "problemSolving": 85,
+              "confidence": 84,
+              "completeness": 88,
+              "roleSpecific": 86
+            },
+            "details": {
+              "wordCount": 130,
+              "fillerCount": 3,
+              "fillerRatio": 0.023,
+              "clarityLevel": "Strong",
+              "confidenceLevel": "High",
+              "matchedKeywords": [
+                "microservices",
+                "kafka",
+                "circuit breaker",
+                "eventual consistency"
+              ],
+              "missingKeywords": [
+                "saga"
+              ],
+              "detectedSkills": [
+                "microservices",
+                "kubernetes",
+                "kafka",
+                "circuit breaker"
+              ],
+              "strengths": [
+                "Sound explanation of message queuing and backpressure handling."
+              ],
+              "improvements": [
+                "Deepen explanation of distributed Saga compensating transactions."
+              ]
+            }
+          }
+        ]
+      }
+    },
+    {
+      "id": "intv-fcf28807",
+      "tenantId": "comp-39093d87",
+      "candidateId": "cand-b1f6c1eb",
+      "jobId": "job-6006880d",
+      "startedAt": "2026-09-05T06:35:25.730Z",
+      "completedAt": "2026-09-05T06:35:25.730Z",
+      "status": "COMPLETED",
+      "overallScore": 61,
+      "aiRecommendation": "Borderline / Needs Human Review",
+      "evaluationReport": {
+        "overallScore": 61,
+        "recommendation": "Borderline / Needs Human Review",
+        "badgeColor": "#f59e0b",
+        "evaluatedAt": "2026-09-05T06:35:25.730Z",
+        "metricsRadar": {
+          "relevance": 65,
+          "knowledge": 60,
+          "technicalCompetency": 58,
+          "communication": 64,
+          "problemSolving": 59,
+          "confidence": 55,
+          "completeness": 65,
+          "roleSpecific": 62
+        },
+        "questionCount": 1,
+        "questions": [
+          {
+            "questionId": "q-c4da6da8",
+            "questionText": "Explain how database indexing works internally (B-Trees vs Hash Indexes) and what trade-offs you consider when adding indexes to a high-write production table.",
+            "category": "Technical",
+            "overallQuestionScore": 61,
+            "metrics": {
+              "relevance": 65,
+              "knowledge": 60,
+              "technicalCompetency": 58,
+              "communication": 64,
+              "problemSolving": 59,
+              "confidence": 55,
+              "completeness": 65,
+              "roleSpecific": 62
+            },
+            "details": {
+              "wordCount": 78,
+              "fillerCount": 6,
+              "fillerRatio": 0.076,
+              "clarityLevel": "Moderate",
+              "confidenceLevel": "Low / Hesitant",
+              "matchedKeywords": [
+                "b-tree",
+                "write",
+                "latency"
+              ],
+              "missingKeywords": [
+                "logarithmic",
+                "range",
+                "trade-off",
+                "storage"
+              ],
+              "detectedSkills": [
+                "sql",
+                "indexing"
+              ],
+              "strengths": [
+                "Identified that indexes speed up select queries."
+              ],
+              "improvements": [
+                "Noticeable hesitation with 6 verbal fillers.",
+                "Lacked explanation of B-Tree logarithmic search mechanics and disk page splits."
+              ]
+            }
+          }
+        ]
+      }
+    },
+    {
+      "id": "intv-68a907b3",
+      "tenantId": "comp-39093d87",
+      "candidateId": "cand-4d786a4f",
+      "jobId": "job-6006880d",
+      "startedAt": "2026-09-05T06:47:30.788Z",
+      "completedAt": "2026-09-05T06:47:30.789Z",
+      "status": "COMPLETED",
+      "overallScore": 66,
+      "aiRecommendation": "Borderline / Needs Human Review",
+      "evaluationReport": {
+        "overallScore": 66,
+        "recommendation": "Borderline / Needs Human Review",
+        "badgeColor": "#f59e0b",
+        "evaluatedAt": "2026-09-05T06:47:30.789Z",
+        "metricsRadar": {
+          "relevance": 67,
+          "knowledge": 69,
+          "technicalCompetency": 70,
+          "communication": 60,
+          "problemSolving": 71,
+          "confidence": 90,
+          "completeness": 50,
+          "roleSpecific": 29
+        },
+        "questionCount": 1,
+        "questions": [
+          {
+            "questionId": "q-c4da6da8",
+            "questionText": "Explain how database indexing works internally (B-Trees vs Hash Indexes) and what trade-offs you consider when adding indexes to a high-write production table.",
+            "category": "Technical",
+            "overallQuestionScore": 66,
+            "metrics": {
+              "relevance": 67,
+              "knowledge": 69,
+              "technicalCompetency": 70,
+              "communication": 60,
+              "problemSolving": 71,
+              "confidence": 90,
+              "completeness": 50,
+              "roleSpecific": 29
+            },
+            "details": {
+              "wordCount": 29,
+              "fillerCount": 0,
+              "fillerRatio": 0,
+              "clarityLevel": "Moderate",
+              "confidenceLevel": "Very High",
+              "matchedKeywords": [
+                "b-tree",
+                "logarithmic",
+                "write",
+                "trade-off",
+                "latency"
+              ],
+              "missingKeywords": [
+                "range",
+                "storage"
+              ],
+              "detectedSkills": [
+                "database"
+              ],
+              "starAnalysis": null,
+              "strengths": [
+                "Demonstrated solid grasp of key terminology: b-tree, logarithmic, write.",
+                "Articulated architectural trade-offs and engineering rationale clearly."
+              ],
+              "improvements": [
+                "Could elaborate further on: range, storage.",
+                "Response is somewhat brief; providing more detailed practical examples would strengthen the answer."
+              ]
+            }
+          }
+        ]
+      }
+    }
+  ],
+  "interviewAnswers": [],
+  "recordings": [
+    {
+      "id": "rec-084772b9",
+      "tenantId": "comp-39093d87",
+      "candidateId": "cand-3fe1784c",
+      "interviewId": "intv-b5970c38",
+      "filePath": "/recordings/cand1_apex_recording.mp4",
+      "duration": 360,
+      "fileSize": 18450000,
+      "mimeType": "video/mp4",
+      "questionTimestamps": [
+        {
+          "questionIndex": 1,
+          "questionId": "q-c4da6da8",
+          "title": "Database Indexing & B-Trees",
+          "startSeconds": 0,
+          "endSeconds": 118
+        },
+        {
+          "questionIndex": 2,
+          "questionId": "q-2546ea61",
+          "title": "Distributed Systems & Saga Pattern",
+          "startSeconds": 119,
+          "endSeconds": 245
+        },
+        {
+          "questionIndex": 3,
+          "questionId": "q-286dbf4b",
+          "title": "Handling Technical Disagreements (STAR)",
+          "startSeconds": 246,
+          "endSeconds": 360
+        }
+      ],
+      "createdAt": "2026-09-05T06:35:25.728Z"
+    },
+    {
+      "id": "rec-162887b4",
+      "tenantId": "comp-d70f0bfd",
+      "candidateId": "cand-148d3e6b",
+      "interviewId": "intv-e20d9396",
+      "filePath": "/recordings/cand2_nova_recording.mp4",
+      "duration": 210,
+      "fileSize": 11200000,
+      "mimeType": "video/mp4",
+      "questionTimestamps": [
+        {
+          "questionIndex": 1,
+          "questionId": "q-2546ea61",
+          "title": "Distributed Systems Communication",
+          "startSeconds": 0,
+          "endSeconds": 210
+        }
+      ],
+      "createdAt": "2026-09-05T06:35:25.729Z"
+    },
+    {
+      "id": "rec-a9b3ee00",
+      "tenantId": "comp-39093d87",
+      "candidateId": "cand-4d786a4f",
+      "interviewId": "intv-68a907b3",
+      "filePath": "/recordings/demo_live_recording.webm",
+      "duration": 180,
+      "fileSize": 8400000,
+      "mimeType": "video/webm",
+      "questionTimestamps": [
+        {
+          "questionIndex": 1,
+          "title": "Explain how database indexing works inte",
+          "startSeconds": 0,
+          "endSeconds": 180
+        }
+      ],
+      "createdAt": "2026-09-05T06:47:30.789Z"
+    }
+  ],
+  "auditLogs": [
+    {
+      "id": "audit-cdba09d2",
+      "tenantId": "comp-39093d87",
+      "actorName": "Ardhnarishwar SuperAdmin",
+      "role": "SUPER_ADMIN",
+      "action": "CANDIDATE_SHORTLISTED",
+      "details": "Candidate Pooja Verma marked as SHORTLISTED. Notes: Candidate articulated B-Tree indexing and write overhead clearly. Approved for round 2.",
+      "timestamp": "2026-09-05T06:47:30.791Z"
+    },
+    {
+      "id": "audit-307f9d92",
+      "tenantId": "comp-39093d87",
+      "actorName": "Pooja Verma",
+      "role": "CANDIDATE",
+      "action": "INTERVIEW_COMPLETED",
+      "details": "Completed interview with score: 66/100 (Borderline / Needs Human Review)",
+      "timestamp": "2026-09-05T06:47:30.789Z"
+    },
+    {
+      "id": "audit-81f6f197",
+      "tenantId": "GLOBAL",
+      "actorName": "Ardhnarishwar SuperAdmin",
+      "role": "SUPER_ADMIN",
+      "action": "AI_RETRAIN",
+      "details": "Triggered model retraining. Vocabulary: 1101 tokens",
+      "timestamp": "2026-09-05T06:47:30.778Z"
+    },
+    {
+      "id": "audit-d99666bf",
+      "tenantId": "GLOBAL",
+      "actorName": "Ardhnarishwar SuperAdmin",
+      "role": "SUPER_ADMIN",
+      "action": "USER_LOGIN",
+      "details": "User admin@ardhnarishwar.ai logged in",
+      "timestamp": "2026-09-05T06:47:30.770Z"
+    },
+    {
+      "id": "audit-44ee75e5",
+      "tenantId": "comp-39093d87",
+      "actorName": "Ardhnarishwar SuperAdmin",
+      "role": "SUPER_ADMIN",
+      "action": "CANDIDATE_SHORTLISTED",
+      "details": "Candidate Pooja Verma marked as SHORTLISTED. Notes: Candidate articulated B-Tree indexing and write overhead clearly. Approved for round 2.",
+      "timestamp": "2026-09-05T06:46:51.793Z"
+    },
+    {
+      "id": "audit-f9d7862e",
+      "tenantId": "GLOBAL",
+      "actorName": "Ardhnarishwar SuperAdmin",
+      "role": "SUPER_ADMIN",
+      "action": "AI_RETRAIN",
+      "details": "Triggered model retraining. Vocabulary: 1101 tokens",
+      "timestamp": "2026-09-05T06:46:51.778Z"
+    },
+    {
+      "id": "audit-9cfc842c",
+      "tenantId": "GLOBAL",
+      "actorName": "Ardhnarishwar SuperAdmin",
+      "role": "SUPER_ADMIN",
+      "action": "USER_LOGIN",
+      "details": "User admin@ardhnarishwar.ai logged in",
+      "timestamp": "2026-09-05T06:46:51.770Z"
+    },
+    {
+      "id": "audit-4b4090a0",
+      "tenantId": "GLOBAL",
+      "actorName": "Ardhnarishwar SuperAdmin",
+      "role": "SUPER_ADMIN",
+      "action": "AI_RETRAIN",
+      "details": "Triggered model retraining. Vocabulary: 1101 tokens",
+      "timestamp": "2026-09-05T06:46:02.469Z"
+    },
+    {
+      "id": "audit-e4145fe1",
+      "tenantId": "GLOBAL",
+      "actorName": "Ardhnarishwar SuperAdmin",
+      "role": "SUPER_ADMIN",
+      "action": "USER_LOGIN",
+      "details": "User admin@ardhnarishwar.ai logged in",
+      "timestamp": "2026-09-05T06:46:02.461Z"
+    },
+    {
+      "id": "audit-7e13df50",
+      "tenantId": "comp-d70f0bfd",
+      "actorName": "AI_ENGINE",
+      "role": "SYSTEM",
+      "action": "EVALUATION_COMPLETED",
+      "details": "Generated 9-metric evaluation for candidate: Ananya Iyer (Score: 84, Hire)",
+      "timestamp": "2026-09-05T06:35:25.732Z"
+    },
+    {
+      "id": "audit-e6c9773b",
+      "tenantId": "comp-d70f0bfd",
+      "actorName": "Meera Nambiar",
+      "role": "COMPANY_ADMIN",
+      "action": "JOB_CREATED",
+      "details": "Created Job: Cloud DevOps Architect",
+      "timestamp": "2026-09-05T06:35:25.732Z"
+    },
+    {
+      "id": "audit-1c10f5a4",
+      "tenantId": "comp-39093d87",
+      "actorName": "Vikramaditya Rao",
+      "role": "COMPANY_ADMIN",
+      "action": "CANDIDATE_SHORTLISTED",
+      "details": "Shortlisted candidate Siddharth Sharma with hiring recommendation",
+      "timestamp": "2026-09-05T06:35:25.732Z"
+    },
+    {
+      "id": "audit-d8b3fb16",
+      "tenantId": "comp-39093d87",
+      "actorName": "AI_ENGINE",
+      "role": "SYSTEM",
+      "action": "EVALUATION_COMPLETED",
+      "details": "Generated 9-metric evaluation for candidate: Siddharth Sharma (Score: 88, Strong Hire)",
+      "timestamp": "2026-09-05T06:35:25.732Z"
+    },
+    {
+      "id": "audit-e0835f81",
+      "tenantId": "comp-39093d87",
+      "actorName": "Vikramaditya Rao",
+      "role": "COMPANY_ADMIN",
+      "action": "CANDIDATE_INVITED",
+      "details": "Generated interview invitation for candidate: Siddharth Sharma",
+      "timestamp": "2026-09-05T06:35:25.731Z"
+    },
+    {
+      "id": "audit-4dc113fd",
+      "tenantId": "comp-39093d87",
+      "actorName": "Vikramaditya Rao",
+      "role": "COMPANY_ADMIN",
+      "action": "JOB_CREATED",
+      "details": "Created Job: Senior Full Stack Engineer",
+      "timestamp": "2026-09-05T06:35:25.731Z"
+    },
+    {
+      "id": "audit-8ca76215",
+      "tenantId": "GLOBAL",
+      "actorName": "Ardhnarishwar SuperAdmin",
+      "role": "SUPER_ADMIN",
+      "action": "PLATFORM_INIT",
+      "details": "Platform initialized with Super Admin and AI Engine 1.4.0",
+      "timestamp": "2026-09-05T06:35:25.731Z"
+    }
+  ]
+}
